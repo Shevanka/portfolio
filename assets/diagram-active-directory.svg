@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 260" width="100%" height="auto" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+  <defs>
+    <marker id="ad-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#1e40af" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="840" height="260" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Outer Lab Network Boundary -->
+  <rect x="14" y="14" width="812" height="232" rx="3" fill="#fcfcfc" stroke="#cbd5e1" stroke-dasharray="3,3" stroke-width="1"/>
+  <text x="24" y="28" font-size="9" font-weight="600" fill="#64748b" font-family="'JetBrains Mono', Consolas, monospace">ISOLATED HOMELAB ENVIRONMENT (VirtualBox Host-Only: 192.168.56.0/24 — No External Bridge)</text>
+
+  <!-- Node 1: Domain Controller -->
+  <g transform="translate(30, 42)">
+    <rect x="0" y="0" width="220" height="190" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+    <rect x="0" y="0" width="220" height="26" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="12" y="17" font-size="10.5" font-weight="600" fill="#0f172a" font-family="'JetBrains Mono', Consolas, monospace">DC01.corp.local (192.168.56.10)</text>
+    
+    <text x="12" y="42" font-size="8.5" font-weight="600" fill="#475569">Windows Server 2022 Standard</text>
+    <text x="12" y="56" font-size="8" fill="#64748b">• Active Directory Domain Services (AD DS)</text>
+    <text x="12" y="70" font-size="8" fill="#64748b">• Authoritative DNS Server &amp; Kerberos KDC</text>
+    <text x="12" y="84" font-size="8" fill="#64748b">• Certificate Services (AD CS) Root</text>
+    
+    <rect x="10" y="96" width="200" height="40" rx="2" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="16" y="110" font-size="8" font-weight="600" fill="#1e40af">Kerberos Authentication (Port 88):</text>
+    <text x="16" y="125" font-size="7.5" fill="#334155" font-family="'JetBrains Mono', Consolas, monospace">AES-256-CTS-HMAC-SHA1-96 Only</text>
+    <text x="16" y="133" font-size="7" fill="#64748b">RC4-HMAC disabled to prevent Kerberoasting</text>
+
+    <rect x="10" y="142" width="200" height="38" rx="2" fill="#ecfdf5" stroke="#a7f3d0"/>
+    <text x="16" y="156" font-size="8" font-weight="600" fill="#065f46">Directory Database (NTDS.dit):</text>
+    <text x="16" y="171" font-size="7.5" fill="#047857">Encrypted volume with restricted SYSTEM ACL</text>
+  </g>
+
+  <!-- Arrow DC -> OU Structure -->
+  <line x1="250" y1="137" x2="280" y2="137" stroke="#1e40af" stroke-width="1.5" marker-end="url(#ad-arrow)" />
+
+  <!-- Node 2: OU Architecture -->
+  <g transform="translate(286, 42)">
+    <rect x="0" y="0" width="240" height="190" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+    <rect x="0" y="0" width="240" height="26" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="12" y="17" font-size="10.5" font-weight="600" fill="#0f172a" font-family="'JetBrains Mono', Consolas, monospace">TIERED OU HIERARCHY</text>
+    
+    <!-- Tree display -->
+    <rect x="10" y="34" width="220" height="30" rx="2" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="16" y="47" font-size="8.5" font-weight="600" fill="#0f172a" font-family="'JetBrains Mono', Consolas, monospace">OU=Tier0_PrivilegedAdmin</text>
+    <text x="16" y="58" font-size="7.5" fill="#dc2626">No Internet Access • Protected Users Group</text>
+    
+    <rect x="10" y="70" width="220" height="30" rx="2" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="16" y="83" font-size="8.5" font-weight="600" fill="#0f172a" font-family="'JetBrains Mono', Consolas, monospace">OU=Tier1_MemberServers</text>
+    <text x="16" y="94" font-size="7.5" fill="#475569">Isolated Service Accounts with gMSA</text>
+    
+    <rect x="10" y="106" width="220" height="30" rx="2" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="16" y="119" font-size="8.5" font-weight="600" fill="#0f172a" font-family="'JetBrains Mono', Consolas, monospace">OU=Tier2_Workstations</text>
+    <text x="16" y="130" font-size="7.5" fill="#1e40af">Local Admin Password Solution (LAPS)</text>
+
+    <rect x="10" y="142" width="220" height="38" rx="2" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="16" y="156" font-size="8" font-weight="600" fill="#1e40af">Security Principle:</text>
+    <text x="16" y="170" font-size="7.5" fill="#1e3a8a">Tier Separation Model (prevents credential credential theft from workstations reaching Tier-0)</text>
+  </g>
+
+  <!-- Arrow OU -> GPO & Endpoints -->
+  <line x1="526" y1="137" x2="556" y2="137" stroke="#1e40af" stroke-width="1.5" marker-end="url(#ad-arrow)" />
+
+  <!-- Node 3: Hardening GPO Policies -->
+  <g transform="translate(562, 42)">
+    <rect x="0" y="0" width="250" height="190" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+    <rect x="0" y="0" width="250" height="26" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="12" y="17" font-size="10.5" font-weight="600" fill="#0f172a" font-family="'JetBrains Mono', Consolas, monospace">ENFORCED GPO POLICIES</text>
+    
+    <rect x="10" y="34" width="230" height="34" rx="2" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="16" y="47" font-size="8" font-weight="600" fill="#0f172a">GPO-01: Identity &amp; Auth Hardening</text>
+    <text x="16" y="59" font-size="7.5" fill="#475569">• 14-char passphrase • NTLMv1 blocked</text>
+    
+    <rect x="10" y="72" width="230" height="34" rx="2" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="16" y="85" font-size="8" font-weight="600" fill="#0f172a">GPO-02: Protocol Poisoning Defense</text>
+    <text x="16" y="97" font-size="7.5" fill="#475569">• Disable LLMNR &amp; NetBIOS (Mitigates Responder)</text>
+    
+    <rect x="10" y="110" width="230" height="34" rx="2" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="16" y="123" font-size="8" font-weight="600" fill="#0f172a">GPO-03: Attack Surface Reduction</text>
+    <text x="16" y="135" font-size="7.5" fill="#475569">• SMBv1 disabled • SMB Signing Required</text>
+    
+    <rect x="10" y="148" width="230" height="34" rx="2" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="16" y="161" font-size="8" font-weight="600" fill="#1e40af">GPO-04: Advanced Telemetry &amp; Logging</text>
+    <text x="16" y="173" font-size="7.5" fill="#1e3a8a">• ScriptBlock Logging (EID 4104) • Process Commandline</text>
+  </g>
+</svg>

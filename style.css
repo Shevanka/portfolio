@@ -1,0 +1,1284 @@
+/* ==========================================================================
+   TECHNICAL PORTFOLIO & ENGINEERING DOSSIER
+   Design Direction: Editorial Web Publication & Academic Technical Dossier
+   Target: KRTI PENS 2027 — EFRISA Programmer
+   Candidate: Shevanka Bagus Dwiyudi Kurniawan
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap');
+
+:root {
+  /* Editorial Color Palette: Warm Paper & Charcoal */
+  --bg-canvas: #fcfbf9;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f8fafc;
+  --bg-code: #0f172a;
+  
+  --text-primary: #18181b;       /* Dark charcoal */
+  --text-secondary: #52525b;     /* Muted neutral gray */
+  --text-muted: #71717a;         /* Meta labels */
+  --text-faint: #a1a1aa;         /* Hairline dividers / timestamps */
+  
+  --border-subtle: #e4e4e7;      /* Clean neutral rule */
+  --border-medium: #cbd5e1;      /* Architectural frames */
+  --border-strong: #0f172a;      /* Solid black/navy rule */
+  
+  /* Restrained Technical Accent: Deep Navy / Cobalt Blue */
+  --accent-primary: #1e40af;     /* IEEE / Bell Labs technical blue */
+  --accent-hover: #1d4ed8;
+  --accent-subtle: #eff6ff;     /* Tinted background for badges */
+  --accent-border: #bfdbfe;
+  --accent-tag-text: #1e3a8a;
+  
+  /* Typography Stacks */
+  --font-display: "Newsreader", "Charter", "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Monaco, Consolas, monospace;
+}
+
+/* Base Reset & Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+}
+
+/* Hyperlinks */
+a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4 {
+  color: var(--text-primary);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
+
+p {
+  margin-bottom: 0.65rem;
+  color: var(--text-secondary);
+}
+
+strong, b {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Monospace Utilities */
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* Section Label & Micro Header */
+.section-meta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.section-meta::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-primary);
+}
+
+/* Web Interactive Navigation Bar */
+.web-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(252, 251, 249, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 0.6rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.web-nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-brand-title {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+}
+
+.target-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--accent-subtle);
+  border: 1px solid var(--accent-border);
+  color: var(--accent-tag-text);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 2px;
+  letter-spacing: 0.03em;
+}
+
+.web-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  list-style: none;
+}
+
+.web-nav-links a {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.web-nav-links a:hover {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.btn-print {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.35rem 0.75rem;
+  background-color: var(--text-primary);
+  color: #ffffff !important;
+  border: 1px solid var(--text-primary);
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: background-color 0.15s ease;
+}
+
+.btn-print:hover {
+  background-color: #27272a;
+  text-decoration: none;
+}
+
+/* Master Container */
+.dossier-wrapper {
+  max-width: 980px;
+  margin: 1.5rem auto 3rem;
+  padding: 0 1rem;
+}
+
+/* ==========================================================================
+   Page Sheet Structure (Screen & Print Unified)
+   ========================================================================== */
+
+.dossier-page {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  margin-bottom: 2rem;
+  padding: 2.2rem 2.5rem 2rem;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+/* Page Header Masthead */
+.page-masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1.5px solid var(--text-primary);
+  padding-bottom: 0.45rem;
+  margin-bottom: 1.5rem;
+}
+
+.masthead-left {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.masthead-right {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+/* Page Footer */
+.page-footer {
+  margin-top: 1.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
+
+.footer-left {
+  letter-spacing: 0.03em;
+}
+
+.footer-right {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   Page 1: Executive Dossier & Candidate Profile
+   ========================================================================== */
+
+.hero-editorial {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.hero-name-block {
+  margin-bottom: 1rem;
+}
+
+.candidate-role {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  letter-spacing: 0.01em;
+  margin-top: 0.35rem;
+}
+
+.candidate-descriptors {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.target-statement-box {
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--accent-primary);
+  padding: 0.75rem 1rem;
+  margin: 1.1rem 0;
+}
+
+.target-statement-box .target-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.25rem;
+}
+
+.target-statement-box p {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+  margin-bottom: 0;
+}
+
+.profile-narrative {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 1.2rem;
+}
+
+/* Coordinates & Contact Matrix */
+.coordinates-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem 1.5rem;
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  padding: 0.8rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.coord-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.coord-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.15rem;
+}
+
+.coord-val {
+  color: var(--text-primary);
+  font-weight: 500;
+  word-break: break-all;
+}
+
+/* Profile Photo & Sidebar Card */
+.hero-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.profile-photo-frame {
+  border: 1px solid var(--border-medium);
+  padding: 4px;
+  background: #ffffff;
+}
+
+.profile-photo-frame img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.sidebar-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.sidebar-data-table tr {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.sidebar-data-table td {
+  padding: 0.4rem 0.2rem;
+  vertical-align: top;
+}
+
+.sidebar-data-table td.s-key {
+  color: var(--text-muted);
+  width: 40%;
+}
+
+.sidebar-data-table td.s-val {
+  color: var(--text-primary);
+  font-weight: 500;
+  text-align: right;
+}
+
+/* Focus Areas Section on Cover */
+.focus-areas-block {
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.focus-areas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.6rem;
+}
+
+.focus-col h4 {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-primary);
+  margin-bottom: 0.4rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.focus-col ul {
+  list-style: none;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+
+.focus-col li {
+  position: relative;
+  padding-left: 0.85rem;
+  margin-bottom: 0.3rem;
+}
+
+.focus-col li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Page 2: Technical Skills Matrix & Engineering Foundations
+   ========================================================================== */
+
+.skills-overview-lead {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 1.2rem;
+}
+
+.skills-matrix-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.skill-domain-card {
+  border: 1px solid var(--border-subtle);
+  background: #ffffff;
+  padding: 1rem 1.15rem;
+}
+
+.domain-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.domain-header h3 {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+}
+
+.domain-index {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+.skill-group {
+  margin-bottom: 0.65rem;
+}
+
+.skill-group:last-child {
+  margin-bottom: 0;
+}
+
+.skill-group-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.25rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.tech-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 0.15rem 0.45rem;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.tech-tag.primary {
+  background-color: var(--accent-subtle);
+  border-color: var(--accent-border);
+  color: var(--accent-tag-text);
+  font-weight: 600;
+}
+
+/* Secondary Meta: Academic & Languages Table */
+.foundations-dual-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.foundation-box h4 {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.spec-table tr {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.spec-table td {
+  padding: 0.4rem 0.3rem;
+  color: var(--text-secondary);
+}
+
+.spec-table td.spec-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  width: 40%;
+}
+
+/* ==========================================================================
+   Featured Case Study Sections (Pages 3, 4, 5)
+   ========================================================================== */
+
+.case-study-header {
+  margin-bottom: 1.1rem;
+}
+
+.case-study-title {
+  font-size: 1.65rem;
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+}
+
+.case-study-summary {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  font-style: italic;
+  font-family: var(--font-display);
+}
+
+/* Spec Strip / Metadata Ribbon */
+.metadata-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--accent-primary);
+  padding: 0.65rem 0.9rem;
+  margin-bottom: 1.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+}
+
+.meta-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-label {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.15rem;
+}
+
+.meta-value {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Case Study Content Grid */
+.case-study-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.case-text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.dossier-subheading {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.case-text-col p {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+.case-text-col ul {
+  list-style: none;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.case-text-col li {
+  position: relative;
+  padding-left: 0.9rem;
+  margin-bottom: 0.35rem;
+}
+
+.case-text-col li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+  font-size: 0.75rem;
+}
+
+/* Metrics and Results Table */
+.results-matrix {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  margin-top: 0.5rem;
+}
+
+.results-matrix th {
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  padding: 0.35rem 0.5rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.results-matrix td {
+  border: 1px solid var(--border-subtle);
+  padding: 0.35rem 0.5rem;
+  color: var(--text-secondary);
+}
+
+.results-matrix tr:nth-child(even) {
+  background-color: #fafaf9;
+}
+
+.highlight-stat {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  font-family: var(--font-mono);
+}
+
+/* Evidence and Visual Framing */
+.visual-evidence-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.evidence-frame {
+  border: 1px solid var(--border-medium);
+  background: #ffffff;
+  padding: 6px;
+}
+
+.evidence-frame img, .evidence-frame svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--border-subtle);
+}
+
+.evidence-caption {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.evidence-caption span.source-tag {
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+/* Code Audit Block */
+.code-audit-box {
+  background-color: var(--bg-code);
+  border: 1px solid #1e293b;
+  border-radius: 2px;
+  padding: 0.65rem 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: #e2e8f0;
+  line-height: 1.45;
+  overflow-x: auto;
+}
+
+.code-audit-box .code-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 0.35rem;
+  margin-bottom: 0.45rem;
+  color: #94a3b8;
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.code-audit-box .code-header span.vulnerable {
+  color: #f87171;
+  font-weight: 600;
+}
+
+.code-audit-box .code-header span.remediated {
+  color: #34d399;
+  font-weight: 600;
+}
+
+.code-line {
+  display: block;
+}
+
+.code-comment {
+  color: #64748b;
+}
+
+.code-keyword {
+  color: #93c5fd;
+}
+
+.code-string {
+  color: #86efac;
+}
+
+.code-highlight-vuln {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+}
+
+.code-highlight-fix {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: #a7f3d0;
+}
+
+/* Repository Footer Strip */
+.repo-access-ribbon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  padding: 0.45rem 0.85rem;
+  margin-top: 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.repo-access-ribbon .repo-link {
+  font-weight: 600;
+  color: var(--accent-primary);
+}
+
+.repo-access-ribbon .repo-verified {
+  color: #15803d;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* ==========================================================================
+   Page 6: Additional Software, Honors & Organization Dossier
+   ========================================================================== */
+
+.compact-projects-editorial {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.compact-project-item {
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.65rem;
+}
+
+.project-item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.2rem;
+}
+
+.project-item-title {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.project-item-repo {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+}
+
+.project-item-desc {
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+  margin-bottom: 0.35rem;
+}
+
+.project-item-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.project-item-stack span {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  padding: 0.05rem 0.35rem;
+  border-radius: 2px;
+}
+
+/* Bottom Split: Honors & Leadership */
+.bottom-dossier-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.dossier-sub-card h3 {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.6rem;
+}
+
+.achievement-list {
+  list-style: none;
+}
+
+.achievement-item {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.achievement-item::before {
+  content: "■";
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+  font-size: 0.55rem;
+  top: 0.3rem;
+}
+
+.achievement-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.achievement-detail {
+  font-size: 0.76rem;
+  line-height: 1.4;
+  color: var(--text-secondary);
+}
+
+.training-disclaimer {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+  font-style: italic;
+}
+
+/* Colophon Box */
+.colophon-strip {
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  padding: 0.65rem 0.9rem;
+  margin-top: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
+
+.colophon-left strong {
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   Print & A4 PDF Layout Engine
+   ========================================================================== */
+
+@page {
+  size: A4 portrait;
+  margin: 10mm 12mm 10mm 12mm;
+}
+
+@media print {
+  /* Hide interactive web elements */
+  .no-print,
+  .web-nav {
+    display: none !important;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #18181b !important;
+    font-size: 8.1pt !important;
+    line-height: 1.42 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .dossier-wrapper {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Strict A4 Page Dimensions per sheet */
+  .dossier-page {
+    width: 100% !important;
+    min-height: 265mm !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+
+  .page-content-wrapper {
+    flex: 1 1 auto;
+  }
+
+  /* Sharp vector borders and text */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .page-masthead {
+    margin-bottom: 3.5mm !important;
+    padding-bottom: 1.5mm !important;
+    border-bottom: 0.4mm solid #18181b !important;
+  }
+
+  .page-footer {
+    margin-top: 0 !important;
+    padding-top: 2mm !important;
+    border-top: 0.2mm solid #cbd5e1 !important;
+  }
+
+  /* Compact typography adjustments for exact A4 height budgeting */
+  h1 {
+    font-size: 20pt !important;
+    line-height: 1.15 !important;
+  }
+
+  h2 {
+    font-size: 13.5pt !important;
+    line-height: 1.25 !important;
+  }
+
+  .candidate-role {
+    font-size: 9.5pt !important;
+  }
+
+  .target-statement-box {
+    margin: 2.5mm 0 !important;
+    padding: 2mm 3mm !important;
+  }
+
+  .coordinates-grid {
+    padding: 2mm 3mm !important;
+    gap: 1.5mm 3mm !important;
+    font-size: 6.8pt !important;
+  }
+
+  .hero-editorial {
+    grid-template-columns: 1fr 190px !important;
+    gap: 4mm !important;
+  }
+
+  .profile-photo-frame img {
+    height: 190px !important;
+  }
+
+  .metadata-strip {
+    margin-bottom: 2.8mm !important;
+    padding: 2mm 3mm !important;
+    font-size: 6.8pt !important;
+  }
+
+  .case-study-title {
+    font-size: 14pt !important;
+  }
+
+  .case-study-grid {
+    gap: 4mm !important;
+  }
+
+  .case-text-col {
+    gap: 2.5mm !important;
+  }
+
+  .case-text-col p, .case-text-col ul {
+    font-size: 7.2pt !important;
+    line-height: 1.4 !important;
+  }
+
+  .visual-evidence-col {
+    gap: 2.5mm !important;
+  }
+
+  .results-matrix th, .results-matrix td {
+    padding: 1.5mm 2.2mm !important;
+    font-size: 6.5pt !important;
+  }
+
+  .code-audit-box {
+    padding: 2mm 2.5mm !important;
+    font-size: 6.2pt !important;
+    line-height: 1.35 !important;
+  }
+
+  .compact-projects-editorial {
+    gap: 2mm 3.5mm !important;
+    margin-bottom: 3mm !important;
+  }
+
+  .project-item-item {
+    padding-bottom: 1.8mm !important;
+  }
+
+  .project-item-title {
+    font-size: 7.8pt !important;
+  }
+
+  .project-item-desc {
+    font-size: 6.8pt !important;
+    line-height: 1.35 !important;
+  }
+
+  .bottom-dossier-split {
+    gap: 3.5mm !important;
+    padding-top: 2.5mm !important;
+  }
+
+  .achievement-item {
+    margin-bottom: 1.8mm !important;
+  }
+
+  .achievement-title {
+    font-size: 7.5pt !important;
+  }
+
+  .achievement-detail {
+    font-size: 6.8pt !important;
+  }
+
+  .colophon-strip {
+    margin-top: 2.5mm !important;
+    padding: 2mm 3mm !important;
+    font-size: 6.5pt !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive Adaptations (Tablet & Mobile)
+   ========================================================================== */
+
+@media screen and (max-width: 820px) {
+  .web-nav {
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: flex-start;
+  }
+  
+  .web-nav-links {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .dossier-page {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-editorial {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hero-sidebar {
+    order: -1;
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .profile-photo-frame img {
+    height: 180px;
+  }
+
+  .skills-matrix-grid,
+  .case-study-grid,
+  .foundations-dual-table,
+  .compact-projects-editorial,
+  .bottom-dossier-split {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .focus-areas-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .metadata-strip {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  html {
+    font-size: 13px;
+  }
+
+  .dossier-page {
+    padding: 1.25rem 1rem;
+  }
+
+  .hero-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .coordinates-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metadata-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .repo-access-ribbon {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .colophon-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+}

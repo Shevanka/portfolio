@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shevanka Kurniawan — Technical Portfolio &amp; Engineering Dossier</title>
+  <meta name="description" content="Technical Portfolio & Engineering Dossier of Shevanka Bagus Dwiyudi Kurniawan — Software Engineering, Network Systems & Defensive Cybersecurity. PENS Informatics Engineering.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Web Interactive Navigation Bar (Hidden in Print) -->
+  <nav class="web-nav no-print">
+    <div class="web-nav-brand">
+      <span class="nav-brand-title">SHEVANKA KURNIAWAN / DOSSIER</span>
+      <span class="target-badge">KRTI PENS 2027 — EFRISA PROGRAMMER</span>
+    </div>
+    <ul class="web-nav-links">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#case-01">API Security</a></li>
+      <li><a href="#case-02">Networking</a></li>
+      <li><a href="#case-03">Windows Domain</a></li>
+      <li><a href="#software">Software &amp; Honors</a></li>
+    </ul>
+    <button class="btn-print" onclick="window.print()">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 6 2 18 2 18 9"></polyline>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+        <rect x="6" y="14" width="12" height="8"></rect>
+      </svg>
+      Print / PDF Export
+    </button>
+  </nav>
+
+  <main class="dossier-wrapper">
+
+    <!-- ======================================================================
+         PAGE 1: Executive Dossier & Candidate Profile
+         ====================================================================== -->
+    <section class="dossier-page" id="overview">
+      <div class="page-content-wrapper">
+        <header class="page-masthead">
+          <div class="masthead-left">TECHNICAL DOSSIER // AUTONOMOUS SYSTEMS &amp; NETWORK ENGINEERING</div>
+          <div class="masthead-right">PENS INFORMATICS · REF: AGY-PEN-2027</div>
+        </header>
+
+        <div class="hero-editorial">
+          <!-- Left Column: Identity & Positioning -->
+          <div class="hero-main-col">
+            <div class="hero-name-block">
+              <div class="section-meta">CANDIDATE DOSSIER</div>
+              <h1>Shevanka Bagus<br>Dwiyudi Kurniawan</h1>
+              <div class="candidate-role">Software Engineering &amp; Network Systems</div>
+              <div class="candidate-descriptors">Systems Programming &middot; Network Protocol Engineering &middot; Defensive Cybersecurity</div>
+            </div>
+
+            <!-- Target Context Callout -->
+            <div class="target-statement-box">
+              <div class="target-kicker">Target Context // KRTI PENS 2027 — EFRISA Programmer</div>
+              <p>Applying as Programmer for the <strong>Kontes Robot Terbang Indonesia (KRTI) PENS EFRISA Division</strong>. Technical focus: low-level systems programming in C/Python, deterministic packet telemetry protocols, hardware-software integration, and fault-tolerant system resilience under mission-critical operating constraints.</p>
+            </div>
+
+            <p class="profile-narrative">
+              D4 Informatics Engineering student at <strong>Politeknik Elektronika Negeri Surabaya (PENS)</strong> (GPA: 3.62 / 4.00). My engineering practice integrates backend systems, protocol analysis, and defensive cybersecurity: I build a system, locate its architectural failure modes, test it empirically against standard threat models, and document reproducible mitigations. Work presented here is drawn from public repositories and hands-on lab environments.
+            </p>
+
+            <!-- Coordinates & Verification Matrix -->
+            <div class="coordinates-grid">
+              <div class="coord-item">
+                <span class="coord-label">Email</span>
+                <span class="coord-val"><a href="mailto:shevanka.kurniawan@gmail.com">shevanka.kurniawan@gmail.com</a></span>
+              </div>
+              <div class="coord-item">
+                <span class="coord-label">GitHub</span>
+                <span class="coord-val"><a href="https://github.com/Shevanka" target="_blank" rel="noopener">github.com/Shevanka</a></span>
+              </div>
+              <div class="coord-item">
+                <span class="coord-label">LinkedIn</span>
+                <span class="coord-val"><a href="https://linkedin.com/in/shevanka-kurniawan" target="_blank" rel="noopener">linkedin.com/in/shevanka-kurniawan</a></span>
+              </div>
+              <div class="coord-item">
+                <span class="coord-label">Phone &amp; Location</span>
+                <span class="coord-val">+62 856 4348 1417 &middot; Surabaya, East Java</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Authentic Profile Photo & Quick Specs -->
+          <aside class="hero-sidebar">
+            <div class="profile-photo-frame">
+              <img src="assets/shevanka-profile.png" alt="Shevanka Bagus Dwiyudi Kurniawan">
+            </div>
+            <table class="sidebar-data-table">
+              <tbody>
+                <tr>
+                  <td class="s-key">Institution</td>
+                  <td class="s-val">PENS (EEPIS)</td>
+                </tr>
+                <tr>
+                  <td class="s-key">Degree</td>
+                  <td class="s-val">D4 Informatics Eng.</td>
+                </tr>
+                <tr>
+                  <td class="s-key">Period</td>
+                  <td class="s-val">2025 – Present</td>
+                </tr>
+                <tr>
+                  <td class="s-key">Academic GPA</td>
+                  <td class="s-val">3.62 / 4.00</td>
+                </tr>
+                <tr>
+                  <td class="s-key">Status</td>
+                  <td class="s-val">Active Student</td>
+                </tr>
+              </tbody>
+            </table>
+          </aside>
+        </div>
+
+        <!-- Focus Areas Breakdown -->
+        <div class="focus-areas-block">
+          <div class="section-meta">CORE ENGINEERING COMPETENCIES</div>
+          <div class="focus-areas-grid">
+            <div class="focus-col">
+              <h4>Systems &amp; Backend</h4>
+              <ul>
+                <li>Low-level C embedded runtimes &amp; POSIX APIs</li>
+                <li>RESTful API architecture &amp; MVC patterns</li>
+                <li>SQLite / MySQL relational database design</li>
+                <li>Process management &amp; deterministic memory</li>
+              </ul>
+            </div>
+            <div class="focus-col">
+              <h4>Networking &amp; Protocols</h4>
+              <ul>
+                <li>IPv4/IPv6 packet processing per RFC 791 / 1071</li>
+                <li>Hierarchical CIDR / VLSM subnet optimization</li>
+                <li>VLAN 802.1Q routing &amp; CoPP rate limiting</li>
+                <li>Wireshark frame inspection &amp; Packet Tracer</li>
+              </ul>
+            </div>
+            <div class="focus-col">
+              <h4>Security &amp; Hardening</h4>
+              <ul>
+                <li>OWASP API Security Top 10 &amp; BOLA/IDOR auditing</li>
+                <li>Active Directory DS &amp; Tiered OU architecture</li>
+                <li>Group Policy (GPO) hardening &amp; LAPS enforcement</li>
+                <li>Automated regression testing &amp; threat modeling</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="page-footer">
+        <span class="footer-left">Shevanka Kurniawan &middot; Technical Portfolio &amp; Dossier</span>
+        <span class="footer-right">PAGE 01 / 06</span>
+      </footer>
+    </section>
+
+    <!-- ======================================================================
+         PAGE 2: Technical Skills Matrix & Engineering Foundations
+         ====================================================================== -->
+    <section class="dossier-page" id="skills">
+      <div class="page-content-wrapper">
+        <header class="page-masthead">
+          <div class="masthead-left">SECTION 01 // CAPABILITIES MATRIX &amp; ENGINEERING SPECIFICATIONS</div>
+          <div class="masthead-right">TECHNICAL SKILLS</div>
+        </header>
+
+        <div class="case-study-header">
+          <div class="section-meta">ENGINEERING COMPETENCY FRAMEWORK</div>
+          <h2>Technical Skills &amp; Engineering Foundations</h2>
+        </div>
+
+        <p class="skills-overview-lead">
+          Technical competencies are structured across four core engineering domains. Rather than self-assigned percentage bars or arbitrary scores, capabilities are demonstrated through applied implementation across low-level runtimes, protocol implementations, directory services, and automated test harnesses.
+        </p>
+
+        <!-- 4-Domain Skills Grid -->
+        <div class="skills-matrix-grid">
+          <!-- Domain 1 -->
+          <div class="skill-domain-card">
+            <div class="domain-header">
+              <h3>Programming &amp; Software Development</h3>
+              <span class="domain-index">01</span>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-label">Core Languages</div>
+              <div class="tech-tags">
+                <span class="tech-tag primary">C (ISO C99/C11)</span>
+                <span class="tech-tag primary">Python 3.x</span>
+                <span class="tech-tag primary">JavaScript (Node.js)</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Dart</span>
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Lua 5.4</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-label">Architecture &amp; Frameworks</div>
+              <div class="tech-tags">
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">Flutter SDK</span>
+                <span class="tech-tag">React 18</span>
+                <span class="tech-tag">Laravel 12</span>
+                <span class="tech-tag">RESTful API Design</span>
+                <span class="tech-tag">MVC / Clean Architecture</span>
+                <span class="tech-tag">Drift (Reactive SQLite)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Domain 2 -->
+          <div class="skill-domain-card">
+            <div class="domain-header">
+              <h3>Networking &amp; Communication</h3>
+              <span class="domain-index">02</span>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-label">Protocols &amp; Standards</div>
+              <div class="tech-tags">
+                <span class="tech-tag primary">TCP/IP Protocol Suite</span>
+                <span class="tech-tag primary">IPv4 / IPv6</span>
+                <span class="tech-tag primary">RFC 791 / 1071 / 1624</span>
+                <span class="tech-tag">TCP SYN / ACK Flow</span>
+                <span class="tech-tag">UDP Datagrams</span>
+                <span class="tech-tag">ICMP Control Messages</span>
+                <span class="tech-tag">DNS</span>
+                <span class="tech-tag">DHCP</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-label">Routing &amp; Network Operations</div>
+              <div class="tech-tags">
+                <span class="tech-tag">CIDR &amp; VLSM (/12 to /30)</span>
+                <span class="tech-tag">VLAN 802.1Q</span>
+                <span class="tech-tag">Control Plane Policing (CoPP)</span>
+                <span class="tech-tag">RTBH Mitigation</span>
+                <span class="tech-tag">Wireshark Analysis</span>
+                <span class="tech-tag">Cisco Packet Tracer</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Domain 3 -->
+          <div class="skill-domain-card">
+            <div class="domain-header">
+              <h3>Cybersecurity &amp; System Security</h3>
+              <span class="domain-index">03</span>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-label">Application Security &amp; Testing</div>
+              <div class="tech-tags">
+                <span class="tech-tag primary">OWASP API Security Top 10</span>
+                <span class="tech-tag primary">BOLA / IDOR Auditing</span>
+                <span class="tech-tag primary">JWT Authentication (HS256)</span>
+                <span class="tech-tag">Role-Based Access Control (RBAC)</span>
+                <span class="tech-tag">Threat Modeling</span>
+                <span class="tech-tag">CWE-639 / CWE-284</span>
+                <span class="tech-tag">CVSS v3.1 Scoring</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-label">Infrastructure &amp; Identity Security</div>
+              <div class="tech-tags">
+                <span class="tech-tag">Active Directory DS</span>
+                <span class="tech-tag">Group Policy (GPO)</span>
+                <span class="tech-tag">LAPS Password Management</span>
+                <span class="tech-tag">SMBv1 &amp; LLMNR Deprecation</span>
+                <span class="tech-tag">PowerShell Logging (EID 4104)</span>
+                <span class="tech-tag">Burp Suite</span>
+                <span class="tech-tag">Nmap</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Domain 4 -->
+          <div class="skill-domain-card">
+            <div class="domain-header">
+              <h3>Infrastructure &amp; Tools</h3>
+              <span class="domain-index">04</span>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-label">Platforms &amp; Environments</div>
+              <div class="tech-tags">
+                <span class="tech-tag primary">Linux (Debian / Ubuntu)</span>
+                <span class="tech-tag primary">Windows Server 2022</span>
+                <span class="tech-tag">Oracle VirtualBox (Host-Only)</span>
+                <span class="tech-tag">POSIX Shell (Bash)</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-label">Toolchain &amp; Engineering Workflow</div>
+              <div class="tech-tags">
+                <span class="tech-tag">Git / GitHub VCS</span>
+                <span class="tech-tag">Node.js Runtime</span>
+                <span class="tech-tag">Vite</span>
+                <span class="tech-tag">GCC / Make Toolchain</span>
+                <span class="tech-tag">SQLite3</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Figma (UI Specs)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Secondary Foundations: Academic & Languages -->
+        <div class="foundations-dual-table">
+          <div class="foundation-box">
+            <h4>Academic Standing &amp; Curricular Focus</h4>
+            <table class="spec-table">
+              <tbody>
+                <tr>
+                  <td class="spec-name">Degree &amp; Major</td>
+                  <td>D4 Informatics Engineering (Teknik Informatika)</td>
+                </tr>
+                <tr>
+                  <td class="spec-name">Campus</td>
+                  <td>Politeknik Elektronika Negeri Surabaya (PENS)</td>
+                </tr>
+                <tr>
+                  <td class="spec-name">Cumulative GPA</td>
+                  <td><strong>3.62 / 4.00</strong> (Scale 4.00, 2025–Present)</td>
+                </tr>
+                <tr>
+                  <td class="spec-name">Core Subjects</td>
+                  <td>Data Structures, Computer Networks, Operating Systems, Database Systems, System Administration</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="foundation-box">
+            <h4>Languages &amp; Technical Communication</h4>
+            <table class="spec-table">
+              <tbody>
+                <tr>
+                  <td class="spec-name">Indonesian</td>
+                  <td><strong>Native proficiency</strong> (Primary language for documentation and coordination)</td>
+                </tr>
+                <tr>
+                  <td class="spec-name">English</td>
+                  <td><strong>Intermediate / Working proficiency</strong> (RFC standards, technical manuals, API specs, research)</td>
+                </tr>
+                <tr>
+                  <td class="spec-name">German</td>
+                  <td><strong>Elementary proficiency</strong> (Basic vocabulary and reading comprehension)</td>
+                </tr>
+                <tr>
+                  <td class="spec-name">Documentation</td>
+                  <td>Markdown, technical test reports, architectural schematics, case study audits</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <footer class="page-footer">
+        <span class="footer-left">Shevanka Kurniawan &middot; Technical Portfolio &amp; Dossier</span>
+        <span class="footer-right">PAGE 02 / 06</span>
+      </footer>
+    </section>
+
+    <!-- ======================================================================
+         PAGE 3: Featured Case Study 01 — Student Project API Security Research
+         ====================================================================== -->
+    <section class="dossier-page" id="case-01">
+      <div class="page-content-wrapper">
+        <header class="page-masthead">
+          <div class="masthead-left">FEATURED PROJECT 01 // APPLICATION SECURITY RESEARCH</div>
+          <div class="masthead-right">OWASP API1:2023 · BOLA AUDIT</div>
+        </header>
+
+        <div class="case-study-header">
+          <div class="section-meta">CASE STUDY &middot; REST API SECURITY HARNESS</div>
+          <h2 class="case-study-title">Student Project API Security Research &amp; BOLA Audit</h2>
+          <div class="case-study-summary">Empirical vulnerability analysis, automated regression test harness, and object-level policy remediation in a Node.js REST API.</div>
+        </div>
+
+        <!-- Spec Strip Ribbon -->
+        <div class="metadata-strip">
+          <div class="meta-col">
+            <span class="meta-label">Domain Focus</span>
+            <span class="meta-value">API Security &amp; Access Control</span>
+          </div>
+          <div class="meta-col">
+            <span class="meta-label">Threat Classification</span>
+            <span class="meta-value">OWASP API1:2023 · CWE-639 / 284</span>
+          </div>
+          <div class="meta-col">
+            <span class="meta-label">Severity &amp; Metric</span>
+            <span class="meta-value">CVSS 7.5 (High) · 12 Test Checks</span>
+          </div>
+          <div class="meta-col">
+            <span class="meta-label">Technology Stack</span>
+            <span class="meta-value">Node.js, Express, SQLite, JWT, Supertest</span>
+          </div>
+        </div>
+
+        <!-- Case Study Asymmetric Content Grid -->
+        <div class="case-study-grid">
+          <!-- Text Narrative Column -->
+          <div class="case-text-col">
+            <div>
+              <div class="dossier-subheading">Problem Statement &amp; Research Objective</div>
+              <p>In multi-tenant web and backend architectures, applications frequently confuse <em>authentication</em> (verifying caller identity via tokens) with <em>authorization</em> (verifying whether that specific caller owns the requested resource). The objective was to construct a reproducible academic project service, model access boundaries, demonstrate cross-user data leakage through client-supplied path keys, and construct an automated regression test harness enforcing strict object-level access policies.</p>
+            </div>
+
+            <div>
+              <div class="dossier-subheading">Technical Implementation</div>
+              <ul>
+                <li><strong>Backend Architecture:</strong> Developed a REST service utilizing Express and SQLite, supporting user authentication, profile reflection, private note management, and role-gated administrative inspection.</li>
+                <li><strong>Flaw Isolation:</strong> Isolated the <code>GET /api/notes/:id</code> controller, which validated incoming JSON Web Tokens (JWT) but executed direct database lookups using unverified path parameters without evaluating ownership against <code>req.user.id</code>.</li>
+                <li><strong>Remediation Strategy:</strong> Contrasted two mitigation patterns: query-level scoping (<code>WHERE id = ? AND user_id = ?</code>) vs controller-level policy enforcement (<code>note.user_id === req.user.id || req.user.role === 'admin'</code>), establishing uniform <code>403 Forbidden</code> responses.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="dossier-subheading">My Individual Contribution</div>
+              <p>Sole researcher and developer: Implemented the Express API, authored the 12-point automated regression test suite, conducted threat modeling against OWASP API Top 10, documented CVSS 7.5 vulnerability findings, and authored the remediation guide.</p>
+            </div>
+
+            <!-- Measurable Results Matrix -->
+            <div>
+              <div class="dossier-subheading">Empirical Test Results</div>
+              <table class="results-matrix">
+                <thead>
+                  <tr>
+                    <th>Test Case Scope</th>
+                    <th>Vulnerable Baseline</th>
+                    <th>Remediated State</th>
+                    <th>Assertion</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Auth &amp; Profile Scoping</td>
+                    <td>200 OK (Scoped)</td>
+                    <td>200 OK (Scoped)</td>
+                    <td>Verified</td>
+                  </tr>
+                  <tr>
+                    <td>BOLA Note #42 (Alice &rarr; Bob)</td>
+                    <td><span class="code-highlight-vuln">200 OK (Data Leak)</span></td>
+                    <td><span class="code-highlight-fix">403 Forbidden</span></td>
+                    <td>Resolved</td>
+                  </tr>
+                  <tr>
+                    <td>Admin Directory Access</td>
+                    <td>403 Forbidden (Non-admin)</td>
+                    <td>403 Forbidden (Non-admin)</td>
+                    <td>RBAC Enforced</td>
+                  </tr>
+                  <tr>
+                    <td>Test Suite Performance</td>
+                    <td colspan="3"><strong>12 / 12 Passing</strong> &middot; 218 ms total execution time</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Visual Evidence Column -->
+          <div class="visual-evidence-col">
+            <!-- Code Audit Comparison -->
+            <div class="code-audit-box">
+              <div class="code-header">
+                <span>src/routes/notes.js</span>
+                <span class="vulnerable">VULNERABLE (main)</span>
+              </div>
+              <span class="code-line"><span class="code-keyword">const</span> noteId = parseInt(req.params.id, <span class="code-string">10</span>);</span>
+              <span class="code-line"><span class="code-comment">// Authenticated JWT check passes, but missing ownership validation</span></span>
+              <span class="code-line"><span class="code-keyword">const</span> note = db.prepare(<span class="code-string">'SELECT * FROM notes WHERE id = ?'</span>).get(noteId);</span>
+              <span class="code-line"><span class="code-highlight-vuln">return res.status(200).json({ note }); // Returns any user's note!</span></span>
+              
+              <div class="code-header" style="margin-top: 6px; padding-top: 4px; border-top: 1px dashed #334155;">
+                <span>research/bola-remediation</span>
+                <span class="remediated">REMEDIATED GUARD</span>
+              </div>
+              <span class="code-line"><span class="code-keyword">if</span> (note.user_id !== req.user.id &amp;&amp; req.user.role !== <span class="code-string">'admin'</span>) {</span>
+              <span class="code-line"><span class="code-highlight-fix">  return res.status(403).json({ error: 'Access denied: You do not own this note' });</span></span>
+              <span class="code-line">}</span>
+            </div>
+
+            <!-- Screenshot 1: npm test output -->
+            <div class="evidence-frame">
+              <img src="assets/00-npm-test.png" alt="Automated Test Suite Output showing 12 passing tests">
+              <div class="evidence-caption">
+                <span>E2E Test Suite Run: 12 Security Validations</span>
+                <span class="source-tag">test/test_api.js</span>
+              </div>
+            </div>
+
+            <!-- Screenshot 2: cURL Exploit -->
+            <div class="evidence-frame">
+              <img src="assets/02-bola-idor-exploit-note42.png" alt="cURL exploit verification extracting Bob's private Note #42">
+              <div class="evidence-caption">
+                <span>Proof of Concept: Exfiltration of Private Note #42</span>
+                <span class="source-tag">HTTP 200 OK</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repository Ribbon -->
+        <div class="repo-access-ribbon">
+          <div>
+            Repository: <a href="https://github.com/Shevanka/student-project-api" target="_blank" rel="noopener" class="repo-link">github.com/Shevanka/student-project-api</a>
+          </div>
+          <div class="repo-verified">
+            Commit 81646e8acf (Audit) &middot; Commit b67a46d (Remediation) &middot; Verified
+          </div>
+        </div>
+      </div>
+
+      <footer class="page-footer">
+        <span class="footer-left">Case Study 01 &middot; Student Project API Security Research</span>
+        <span class="footer-right">PAGE 03 / 06</span>
+      </footer>
+    </section>
+
+    <!-- ======================================================================
+         PAGE 4: Featured Case Study 02 — Computer Network Concepts Repository
+         ====================================================================== -->
+    <section class="dossier-page" id="case-02">
+      <div class="page-content-wrapper">
+        <header class="page-masthead">
+          <div class="masthead-left">FEATURED PROJECT 02 // NETWORK SYSTEMS &amp; PROTOCOL ENGINEERING</div>
+          <div class="masthead-right">RFC STANDARDS · PACKET VERIFICATION</div>
+        </header>
+
+        <div class="case-study-header">
+          <div class="section-meta">CASE STUDY &middot; PROTOCOL LAB &amp; SIMULATION</div>
+          <h2 class="case-study-title">Computer Network Concepts &amp; Protocol Simulation</h2>
+          <div class="case-study-summary">Translating network protocol specifications into running Python validation engines, packet simulations, and optimized subnet designs.</div>
+        </div>
+
+        <!-- Spec Strip Ribbon -->
+        <div class="metadata-strip">
+          <div class="meta-col">
+            <span class="meta-label">Domain Focus</span>
+            <span class="meta-value">Protocol Engineering &amp; Subnetting</span>
+          </div>
+          <div class="meta-col">
+            <span class="meta-label">RFC Specifications</span>
+            <span class="meta-value">RFC 791, RFC 1071, RFC 1624</span>
+          </div>
+          <div class="meta-col">
+            <span class="meta-label">Allocation Metric</span>
+            <span class="meta-value">88.28% Subnet Efficiency (/12–/30)</span>
+          </div>
+          <div class="meta-col">
+            <span class="meta-label">Toolchain</span>
+            <span class="meta-value">Python, Cisco Packet Tracer, Wireshark</span>
+          </div>
+        </div>
+
+        <!-- Case Study Asymmetric Content Grid -->
+        <div class="case-study-grid">
+          <!-- Text Narrative Column -->
+          <div class="case-text-col">
+            <div>
+              <div class="dossier-subheading">Problem Statement &amp; Engineering Objective</div>
+              <p>Practical network engineering demands moving beyond theoretical OSI models into deterministic protocol manipulation. The objective was to develop software test suites verifying bit-level IPv4 packet checksums per RFC specifications, evaluate router hop behaviors under TTL manipulation, model control-plane resource starvation (SYN and ICMP flood attacks), and architect an enterprise-grade hierarchical subnet topology using Variable Length Subnet Masking (VLSM).</p>
+            </div>
+
+            <div>
+              <div class="dossier-subheading">Technical Implementation</div>
+              <ul>
+                <li><strong>RFC 1071 &amp; RFC 1624 Algorithmic Validation:</strong> Implemented a Python engine performing 16-bit one's complement addition over IPv4 frame headers. Implemented RFC 1624 incremental checksum update <code>HC' = ~(~HC + ~m + m')</code>, verifying that intermediate routers can update packet checksums after TTL decrement in O(1) time without re-computing the entire 20-byte header.</li>
+                <li><strong>Control Plane Policing (CoPP) &amp; RTBH:</strong> Simulated ICMP echo, UDP amplification, and TCP SYN flood behavior. Applied CoPP rate limits (policing ICMP at 50 pps) and Remotely Triggered Black Hole (RTBH) routing via BGP community tagging to null-route attack traffic at edge ingress.</li>
+                <li><strong>Hierarchical VLSM Subnetting:</strong> Designed address allocations from <code>/12</code> down to <code>/30</code> point-to-point links, isolating management networks, eliminating broadcast domain sprawl, and achieving an <strong>88.28% address utilization efficiency</strong>.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="dossier-subheading">My Individual Contribution</div>
+              <p>Sole author: Developed Python protocol validation test suites, engineered the VLSM mathematical allocation scheme, designed Packet Tracer topologies, and analyzed Wireshark packet captures.</p>
+            </div>
+
+            <!-- Engineering Results Table -->
+            <div>
+              <div class="dossier-subheading">Measurable Results &amp; Specifications</div>
+              <table class="results-matrix">
+                <thead>
+                  <tr>
+                    <th>Component</th>
+                    <th>Standard / Metric</th>
+                    <th>Observed Result</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>IPv4 Header Checksum</td>
+                    <td>RFC 1071 / 1624</td>
+                    <td>Mathematical 0xFFFF verification; 100% match with Wireshark</td>
+                  </tr>
+                  <tr>
+                    <td>TTL Decrement Delta</td>
+                    <td>RFC 791 / RFC 1624</td>
+                    <td>Accurate single-cycle 16-bit inversion without full recalculation</td>
+                  </tr>
+                  <tr>
+                    <td>VLSM Address Efficiency</td>
+                    <td>Subnet /12 to /30</td>
+                    <td><strong class="highlight-stat">88.28%</strong> utilized; 0 IP waste on P2P links</td>
+                  </tr>
+                  <tr>
+                    <td>CoPP Control Plane Defense</td>
+                    <td>Rate-limiting &amp; RTBH</td>
+                    <td>ICMP policed at 50 pps; CPU utilization maintained below 15%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Visual Evidence Column -->
+          <div class="visual-evidence-col">
+            <!-- Authentic Vector SVG Architecture Diagram -->
+            <div class="evidence-frame">
+              <img src="assets/diagram-network-pipeline.svg" alt="RFC 791/1071 Packet Processing and VLSM Routing Architecture Pipeline">
+              <div class="evidence-caption">
+                <span>Architecture: Ingress Checksum Verification &amp; CoPP Pipeline</span>
+                <span class="source-tag">RFC 791/1071/1624</span>
+              </div>
+            </div>
+
+            <!-- Protocol Implementation Snippet -->
+            <div class="code-audit-box">
+              <div class="code-header">
+                <span>python/checksum_rfc1071.py</span>
+                <span>PYTHON ENGINE</span>
+              </div>
+              <span class="code-line"><span class="code-keyword">def</span> <span class="code-string">calculate_checksum</span>(header_bytes):</span>
+              <span class="code-line">    <span class="code-comment"># 16-bit one's complement sum calculation (RFC 1071)</span></span>
+              <span class="code-line">    words = struct.unpack(<span class="code-string">f'!{len(header_bytes)//2}H'</span>, header_bytes)</span>
+              <span class="code-line">    checksum = sum(words)</span>
+              <span class="code-line">    <span class="code-keyword">while</span> (checksum &gt;&gt; <span class="code-string">16</span>):</span>
+              <span class="code-line">        checksum = (checksum &amp; <span class="code-string">0xFFFF</span>) + (checksum &gt;&gt; <span class="code-string">16</span>)</span>
+              <span class="code-line">    <span class="code-keyword">return</span> ~checksum &amp; <span class="code-string">0xFFFF</span></span>
+              
+              <div class="code-header" style="margin-top: 6px; padding-top: 4px; border-top: 1px dashed #334155;">
+                <span>Incremental Update (RFC 1624)</span>
+                <span>HC' = ~(~HC + ~m + m')</span>
+              </div>
+              <span class="code-line"><span class="code-keyword">def</span> <span class="code-string">rfc1624_update</span>(old_hc, old_m, new_m):</span>
+              <span class="code-line">    <span class="code-comment"># Recalculate checksum after TTL decrement without touching other bytes</span></span>
+              <span class="code-line">    c = (~old_hc &amp; <span class="code-string">0xFFFF</span>) + (~old_m &amp; <span class="code-string">0xFFFF</span>) + new_m</span>
+              <span class="code-line">    <span class="code-keyword">return</span> ~((c &amp; <span class="code-string">0xFFFF</span>) + (c &gt;&gt; <span class="code-string">16</span>)) &amp; <span class="code-string">0xFFFF</span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repository Ribbon -->
+        <div class="repo-access-ribbon">
+          <div>
+            Repository: <a href="https://github.com/Shevanka/konsep-jaringan" target="_blank" rel="noopener" class="repo-link">github.com/Shevanka/konsep-jaringan</a>
+          </div>
+          <div class="repo-verified">
+            RFC 791 / 1071 / 1624 Protocol Test Harness &middot; Public Repository
+          </div>
+        </div>
+      </div>
+
+      <footer class="page-footer">
+        <span class="footer-left">Case Study 02 &middot; Computer Network Concepts &amp; Protocol Engineering</span>
+        <span class="footer-right">PAGE 04 / 06</span>
+      </footer>
+    </section>
+
+    <!-- ======================================================================
+         PAGE 5: Featured Case Study 03 — Windows Domain Security & Hardening Lab
+         ====================================================================== -->
+    <section class="dossier-page" id="case-03">
+      <div class="page-content-wrapper">
+        <header class="page-masthead">
+          <div class="masthead-left">FEATURED PROJECT 03 // SYSTEMS &amp; IDENTITY SECURITY</div>
+          <div class="masthead-right">ACTIVE DIRECTORY HARDENING</div>
+        </header>
+
+        <div class="case-study-header">
+          <div class="section-meta">CASE STUDY &middot; ENTERPRISE HOMELAB AUDIT</div>
+          <h2 class="case-study-title">Windows Domain Security &amp; Hardening Lab</h2>
+          <div class="case-study-summary">Isolated virtual enterprise infrastructure for analyzing centralized identity, Group Policy enforcement, and attack surface reduction.</div>
+        </div>
+
+        <!-- Spec Strip Ribbon -->
+        <div class="metadata-strip">
+          <div class="meta-col">
+            <span class="meta-label">Domain Focus</span>
+            <span class="meta-value">Enterprise Identity &amp; Hardening</span>
+          </div>
+          <div class="meta-col">
+            <span class="meta-label">Infrastructure</span>
+            <span class="meta-value">Windows Server 2022, Win 11, VirtualBox</span>
+          </div>
+          <div class="meta-col">
+            <span class="meta-label">Network Boundary</span>
+            <span class="meta-value">Host-Only Segmented (192.168.56.0/24)</span>
+          </div>
+          <div class="meta-col">
+            <span class="meta-label">Security Mechanisms</span>
+            <span class="meta-value">AD DS, GPO, LAPS, Kerberos AES-256</span>
+          </div>
+        </div>
+
+        <!-- Case Study Asymmetric Content Grid -->
+        <div class="case-study-grid">
+          <!-- Text Narrative Column -->
+          <div class="case-text-col">
+            <div>
+              <div class="dossier-subheading">Problem Statement &amp; Systems Objective</div>
+              <p>Enterprise identity architectures predominantly fail not from underlying OS kernel flaws, but from configuration drift, legacy protocol retention (LLMNR, NBT-NS, SMBv1), and flat administrative access tiers that permit lateral movement. The objective was to architect an isolated virtual enterprise domain to study centralized identity boundaries, model credential dumping attack paths, and implement hardened Active Directory baselines.</p>
+            </div>
+
+            <div>
+              <div class="dossier-subheading">Technical Implementation &amp; Architecture</div>
+              <ul>
+                <li><strong>Isolated Virtual Infrastructure:</strong> Deployed a Windows Server 2022 Domain Controller and Windows 11 Enterprise workstations on a segmented VirtualBox Host-Only network (<code>192.168.56.0/24</code>) with zero external internet bridging to prevent telemetry or credential leakage.</li>
+                <li><strong>Tiered Administration Model:</strong> Architected Organizational Units (OUs) following the Tiered Administration model: Tier-0 (Domain Controllers, Protected Users), Tier-1 (Member Servers), and Tier-2 (End-user Workstations). This prevents domain-level credentials from ever caching in lower-tier LSASS memory.</li>
+                <li><strong>Group Policy (GPO) Hardening Baselines:</strong>
+                  <ul>
+                    <li><em>LAPS Implementation:</em> Enforced Local Administrator Password Solution across domain endpoints, randomizing local admin passwords and neutralizing pass-the-hash vectors.</li>
+                    <li><em>Poisoning Defense:</em> Disabled LLMNR and NetBIOS over TCP/IP via GPO, neutralizing rogue Responder-style broadcast poisoning.</li>
+                    <li><em>Protocol Deprecation:</em> Disabled SMBv1 and enforced SMB Signing to thwart NTLM relay attacks.</li>
+                    <li><em>Telemetry &amp; Audit:</em> Configured PowerShell ScriptBlock Logging (Event ID 4104) and command-line process auditing (Event ID 4688).</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="dossier-subheading">My Individual Contribution</div>
+              <p>Sole architect and administrator: Virtual machine provisioning, domain controller promotion (AD DS / DNS), directory schema partitioning, Group Policy authoring, and security verification.</p>
+            </div>
+          </div>
+
+          <!-- Visual Evidence Column -->
+          <div class="visual-evidence-col">
+            <!-- Authentic Vector SVG Architecture Diagram -->
+            <div class="evidence-frame">
+              <img src="assets/diagram-active-directory.svg" alt="Active Directory Domain Services Tiered OU and Hardening Topology">
+              <div class="evidence-caption">
+                <span>Domain Topology: Tiered OU Hierarchy &amp; Hardened GPO Matrix</span>
+                <span class="source-tag">CORP.LOCAL</span>
+              </div>
+            </div>
+
+            <!-- Hardening Controls & Verification Table -->
+            <div>
+              <div class="dossier-subheading">Security Hardening Verification Matrix</div>
+              <table class="results-matrix">
+                <thead>
+                  <tr>
+                    <th>Control Area</th>
+                    <th>Default Configuration</th>
+                    <th>Enforced Hardening State</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Local Administrator</td>
+                    <td>Shared static password</td>
+                    <td><strong style="color: #15803d;">LAPS:</strong> Dynamic per-machine passphrases</td>
+                  </tr>
+                  <tr>
+                    <td>Name Resolution</td>
+                    <td>LLMNR / NBT-NS active</td>
+                    <td><strong style="color: #15803d;">Disabled via GPO:</strong> Mitigates Responder</td>
+                  </tr>
+                  <tr>
+                    <td>File Sharing Security</td>
+                    <td>SMBv1 enabled, signing opt.</td>
+                    <td><strong style="color: #15803d;">SMBv1 Removed;</strong> SMB Signing Required</td>
+                  </tr>
+                  <tr>
+                    <td>Kerberos Encryption</td>
+                    <td>RC4-HMAC permitted</td>
+                    <td><strong style="color: #15803d;">AES-256-CTS-HMAC:</strong> RC4 deprecated</td>
+                  </tr>
+                  <tr>
+                    <td>Host Auditing</td>
+                    <td>Minimal event logging</td>
+                    <td><strong style="color: #15803d;">EID 4104 &amp; 4688:</strong> Full command logging</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repository Ribbon -->
+        <div class="repo-access-ribbon">
+          <div>
+            Repository: <a href="https://github.com/Shevanka/windows-domain-security-lab" target="_blank" rel="noopener" class="repo-link">github.com/Shevanka/windows-domain-security-lab</a>
+          </div>
+          <div class="repo-verified">
+            Active Directory DS Hardening Homelab &middot; Public Documentation
+          </div>
+        </div>
+      </div>
+
+      <footer class="page-footer">
+        <span class="footer-left">Case Study 03 &middot; Windows Domain Security &amp; Hardening Lab</span>
+        <span class="footer-right">PAGE 05 / 06</span>
+      </footer>
+    </section>
+
+    <!-- ======================================================================
+         PAGE 6: Additional Software Systems, Honors & Credentials
+         ====================================================================== -->
+    <section class="dossier-page" id="software">
+      <div class="page-content-wrapper">
+        <header class="page-masthead">
+          <div class="masthead-left">SECTION 02 // SOFTWARE SYSTEMS, HONORS &amp; CREDENTIALS</div>
+          <div class="masthead-right">ENGINEERING RECORDS</div>
+        </header>
+
+        <div class="case-study-header">
+          <div class="section-meta">ADDITIONAL REPOSITORIES &amp; VERIFIED RECORDS</div>
+          <h2>Software Systems, Honors &amp; Activities</h2>
+        </div>
+
+        <!-- Compact Editorial Software List (6 Prioritized Projects) -->
+        <div class="compact-projects-editorial">
+          <!-- Project 1: Lua Engine -->
+          <div class="compact-project-item">
+            <div class="project-item-head">
+              <span class="project-item-title">Lua Engine — Embedded C Interpreter</span>
+              <span class="project-item-repo"><a href="https://github.com/Shevanka/lua-engine" target="_blank" rel="noopener">github.com/Shevanka/lua-engine</a></span>
+            </div>
+            <p class="project-item-desc">Custom embedded Lua 5.4 C runtime and script interpreter with modular C-bindings and an interactive REPL. Zero-dependency Makefile build; designed for embedded scripting and flight-computer telemetry integration.</p>
+            <div class="project-item-stack">
+              <span>C (ISO C99)</span>
+              <span>Lua 5.4 API</span>
+              <span>C-Bindings</span>
+              <span>GCC / Make</span>
+              <span>REPL</span>
+            </div>
+          </div>
+
+          <!-- Project 2: Budget Tracker -->
+          <div class="compact-project-item">
+            <div class="project-item-head">
+              <span class="project-item-title">Budget Tracker — Offline-First Mobile App</span>
+              <span class="project-item-repo"><a href="https://github.com/Shevanka/budget_tracker" target="_blank" rel="noopener">github.com/Shevanka/budget_tracker</a></span>
+            </div>
+            <p class="project-item-desc">Production-ready Android application for offline financial ledger management. Features Drift ORM (reactive SQLite), Riverpod state management, Google ML Kit on-device OCR for receipt scanning, and fl_chart visualizations.</p>
+            <div class="project-item-stack">
+              <span>Flutter</span>
+              <span>Dart</span>
+              <span>Riverpod</span>
+              <span>Drift (SQLite)</span>
+              <span>Google ML Kit OCR</span>
+              <span>fl_chart</span>
+            </div>
+          </div>
+
+          <!-- Project 3: SI-KAYA -->
+          <div class="compact-project-item">
+            <div class="project-item-head">
+              <span class="project-item-title">SI-KAYA (Dompet Harian) — Offline PWA</span>
+              <span class="project-item-repo"><a href="https://github.com/Shevanka/si-kaya" target="_blank" rel="noopener">github.com/Shevanka/si-kaya</a></span>
+            </div>
+            <p class="project-item-desc">Progressive Web App (PWA) expense tracking ledger with Service Worker caching for offline reliability, Web App Manifest for mobile installation, and a Python/Flask + SQLite backend synchronization API.</p>
+            <div class="project-item-stack">
+              <span>HTML5 / CSS3</span>
+              <span>JavaScript</span>
+              <span>Service Worker PWA</span>
+              <span>Python</span>
+              <span>Flask</span>
+              <span>SQLite</span>
+            </div>
+          </div>
+
+          <!-- Project 4: Portfolio Website -->
+          <div class="compact-project-item">
+            <div class="project-item-head">
+              <span class="project-item-title">Portfolio Web Platform — React &amp; TypeScript</span>
+              <span class="project-item-repo"><a href="https://github.com/Shevanka/portfolio" target="_blank" rel="noopener">github.com/Shevanka/portfolio</a></span>
+            </div>
+            <p class="project-item-desc">Modern single-page web portfolio built in React 18, TypeScript, Vite, Tailwind CSS, and shadcn/ui. Features English/Indonesian localization, theme persistence, and automated component test suites via Vitest.</p>
+            <div class="project-item-stack">
+              <span>React 18</span>
+              <span>TypeScript</span>
+              <span>Vite</span>
+              <span>Tailwind CSS</span>
+              <span>shadcn/ui</span>
+              <span>Vitest</span>
+            </div>
+          </div>
+
+          <!-- Project 5: Flutter Android Application -->
+          <div class="compact-project-item">
+            <div class="project-item-head">
+              <span class="project-item-title">Flutter Android Application — GDGoC Capstone</span>
+              <span class="project-item-repo"><a href="https://github.com/Shevanka/final-project-android-dev" target="_blank" rel="noopener">github.com/Shevanka/final-project-android-dev</a></span>
+            </div>
+            <p class="project-item-desc">GDGoC Binus Android Developer certification final project. High-fidelity Flutter UI implementation directly translated from Figma design specifications, state-driven widgets, and clean Dart architecture.</p>
+            <div class="project-item-stack">
+              <span>Flutter</span>
+              <span>Dart</span>
+              <span>Mobile UI</span>
+              <span>Figma Spec</span>
+              <span>GDGoC Capstone</span>
+            </div>
+          </div>
+
+          <!-- Project 6: Digital Library Application -->
+          <div class="compact-project-item">
+            <div class="project-item-head">
+              <span class="project-item-title">Digital Library Application — Laravel 12</span>
+              <span class="project-item-repo"><a href="https://github.com/Shevanka/app-perpustakaan" target="_blank" rel="noopener">github.com/Shevanka/app-perpustakaan</a></span>
+            </div>
+            <p class="project-item-desc">Campus digital library management system built with Laravel 12, PHP, MySQL, and Blade templating following strict MVC architecture for book loans, cataloging, and administrative role management.</p>
+            <div class="project-item-stack">
+              <span>Laravel 12</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>Blade</span>
+              <span>MVC Architecture</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Split Bottom Section: Honors/Training and Organizations -->
+        <div class="bottom-dossier-split" id="honors">
+          <!-- Left: Honors & Specialized Training -->
+          <div class="dossier-sub-card">
+            <h3>Honors &amp; Specialized Training</h3>
+            <ul class="achievement-list">
+              <li class="achievement-item">
+                <div class="achievement-title">3rd Place Winner — National BIONIX Competition (2024)</div>
+                <div class="achievement-detail">Business and Information Technology Olympiad, national-level competition organized by Information Systems ITS. Evaluated on systems analysis and technology solutions.</div>
+              </li>
+              <li class="achievement-item">
+                <div class="achievement-title">Best IoT Project Award (2024)</div>
+                <div class="achievement-detail">Awarded for hardware-software integrated IoT design, embedded sensor interfacing, and telemetry prototyping.</div>
+              </li>
+              <li class="achievement-item">
+                <div class="achievement-title">CEH v13 Curriculum — Self-Study (EC-Council)</div>
+                <div class="achievement-detail">Independent curriculum study covering reconnaissance, network scanning, vulnerability assessment, web application security, and penetration testing methodologies in authorized virtual lab environments.</div>
+                <div class="training-disclaimer">* Independent curriculum self-study; does not represent an official certification.</div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right: Leadership & Campus Activities -->
+          <div class="dossier-sub-card">
+            <h3>Activities &amp; Leadership</h3>
+            <ul class="achievement-list">
+              <li class="achievement-item">
+                <div class="achievement-title">Liaison Officer — LKMM Tingkat Pra-Dasar (Oct 2026)</div>
+                <div class="achievement-detail">Dept. of Informatics &amp; Computer Engineering, PENS. Guided participant groups, managed schedule adherence, and coordinated inter-division logistics with the organizing committee.</div>
+              </li>
+              <li class="achievement-item">
+                <div class="achievement-title">Health Division Staff — Pekan Komunitas HIMIT PENS (Sep 2026)</div>
+                <div class="achievement-detail">Informatics Student Association (HIMIT) PENS. Maintained medical readiness, emergency coordination protocols, and student welfare throughout community events.</div>
+              </li>
+              <li class="achievement-item">
+                <div class="achievement-title">Event Division Staff — Bakti Sosial Donor Darah (2025)</div>
+                <div class="achievement-detail">EEPIS Bidikmisi Community. Managed donor scheduling, venue logistics, participant flow, and official coordination with Palang Merah Indonesia (PMI).</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Colophon Strip -->
+        <div class="colophon-strip" id="contact">
+          <div class="colophon-left">
+            <strong>Shevanka Bagus Dwiyudi Kurniawan</strong> &middot; D4 Informatics Engineering &middot; PENS Surabaya
+          </div>
+          <div class="colophon-right">
+            shevanka.kurniawan@gmail.com &middot; +62 856 4348 1417 &middot; github.com/Shevanka
+          </div>
+        </div>
+      </div>
+
+      <footer class="page-footer">
+        <span class="footer-left">Section 02 &middot; Software Systems, Honors &amp; Verified Records</span>
+        <span class="footer-right">PAGE 06 / 06</span>
+      </footer>
+    </section>
+
+  </main>
+
+</body>
+</html>
